@@ -4,6 +4,23 @@
 
 # --- YOUR PERSONAL COORDINATES (keep private) ---
 All_Tags.json
+Coordinates/
+Coordinates.txt
+
+# --- PyInstaller build output ---
+build/
+dist/
+*.spec
+
+# --- Backup folders ---
+BAckups/
+Backups/
+backups/
+
+# --- Zip/archive files ---
+*.zip
+*.rar
+*.7z
 
 # --- Python cache ---
 __pycache__/
