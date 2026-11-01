@@ -1,0 +1,43 @@
+{
+  "exported_at": "2026-07-08T03:23:32",
+  "rectangle_format": "x1-x2*y1-y2 (normalized min-max)",
+  "line_format": "(x1,y1)->(x2,y2) (start->end, direction preserved)",
+  "regions": [
+    {
+      "index": 1,
+      "tag": "Deploy area 01",
+      "shape": "line",
+      "x1": 1950,
+      "y1": 476,
+      "x2": 2004,
+      "y2": 519,
+      "coords": "(1950,476)->(2004,519)",
+      "length": 69.0,
+      "angle_deg": 38.5
+    },
+    {
+      "index": 2,
+      "tag": "Deploy area 03",
+      "shape": "line",
+      "x1": 2076,
+      "y1": 576,
+      "x2": 2143,
+      "y2": 623,
+      "coords": "(2076,576)->(2143,623)",
+      "length": 81.8,
+      "angle_deg": 35.0
+    },
+    {
+      "index": 3,
+      "tag": "Deploy area 02",
+      "shape": "line",
+      "x1": 2248,
+      "y1": 701,
+      "x2": 2310,
+      "y2": 738,
+      "coords": "(2248,701)->(2310,738)",
+      "length": 72.2,
+      "angle_deg": 30.8
+    }
+  ]
+}

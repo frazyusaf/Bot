@@ -1,0 +1,13 @@
+I want you to act with best of your abilities like a World best Software Enginner and Developer with the most Experience and the complete Knowledge of coding, software engenireing and optimization in the world which makes the most optimized and bug free application and have all the latest knowledge of Clash of Clans play. Make a bot Application for clash of clans that loops attack: Bot click sequence will be as:
+1. Attack Button
+2. Find a Match
+3. Attack Button
+4. Spell 01 Select
+5. Spell 02 select
+6. Speel Deploy 01
+7. spell deploy 02
+8. 04- Valk Select        ← moved here
+9. Deploy area 01 (line)
+10. Deploy area 02 (line)
+11. Deploy area 03 (line)
+12–18. Hero 01–04 Select, End Battle, Okay Button, Return Home Button

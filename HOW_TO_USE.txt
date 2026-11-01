@@ -1,0 +1,333 @@
+================================================================================
+       CLASH OF CLANS ATTACK BOT  -  COMPLETE SETUP & USAGE GUIDE
+================================================================================
+
+Written in simple English. Follow every step in order.
+
+________________________________________________________________________________
+WHAT IS IN THIS FOLDER?
+________________________________________________________________________________
+
+  Pointer\screen_region_tagger.py  --> The Pointer Tool
+                                       You use this FIRST to mark buttons on
+                                       your screen and give them names.
+
+  coc_bot.py                       --> The actual Bot
+                                       This reads your saved pointers and
+                                       clicks them automatically.
+
+  calibrate.py                     --> The Test Tool
+                                       Run this to check if your pointers are
+                                       pointing at the right places.
+
+  All_Tags.json                    --> Your saved pointers file
+                                       The Pointer Tool saves here. The Bot
+                                       reads from here. Keep it in this folder.
+
+  Start_Bot.bat                    --> One-click launcher for the Bot
+  requirements.txt                 --> Python packages needed (installed auto)
+
+________________________________________________________________________________
+PART 1 -- INSTALL PYTHON (skip if already done)
+________________________________________________________________________________
+
+  1. Go to: https://www.python.org/downloads/
+  2. Download the latest Python 3 for Windows.
+  3. Run the installer.
+     IMPORTANT: Check the box that says "Add python.exe to PATH"
+  4. Click Install Now.
+
+________________________________________________________________________________
+PART 2 -- SET UP YOUR GAME EMULATOR
+________________________________________________________________________________
+
+  Before doing anything with pointers:
+
+  1. Open your Android emulator (e.g. BlueStacks, LDPlayer, MEmu).
+  2. Open Clash of Clans inside the emulator.
+  3. Set the emulator window to a FIXED size and position on your screen.
+     >>> Never move or resize it after this. The pointers only work when
+         the window is exactly where it was when you tagged it. <<<
+  4. Go to your village home screen in the game.
+
+  IMPORTANT - KEYBOARD SHORTCUTS IN YOUR EMULATOR:
+  The bot uses keyboard keys to select troops, spells, and heroes.
+  You need to make sure your emulator has these key bindings set up:
+
+    Troop slots   -->  Keys:  1  2  3  4
+    Spell slots   -->  Keys:  A  S  D  F
+    Hero slots    -->  Keys:  Q  W  E  R
+
+  Set these up in your emulator's key-mapping / keyboard settings
+  before you tag any pointers.
+
+________________________________________________________________________________
+PART 3 -- HOW TO USE THE POINTER TOOL
+________________________________________________________________________________
+
+  The Pointer Tool lets you draw boxes or lines on your screen to mark
+  button locations, then save them with a name the bot understands.
+
+  --- STEP 1: Open the Pointer Tool ---
+
+  1. Open a Command Prompt or PowerShell window.
+  2. Type this and press Enter:
+       python "C:\Coc Bot Simple v1\Pointer\screen_region_tagger.py"
+  3. A dark window titled "Screen Region Tagger" will open.
+
+  --- STEP 2: Understand the two shape types ---
+
+  RECTANGLE  (for buttons you click)
+    --> Draw a box around the button.
+    --> Click "+ New Rectangle" in the tool.
+
+  LINE  (for areas where troops or spells land on the battlefield)
+    --> Draw a line across the deploy zone.
+    --> Click "/ New Line" in the tool.
+    --> The direction matters! Draw from left to right
+        (or top to bottom) so troops spread naturally.
+
+  --- STEP 3: How to draw a pointer ---
+
+  1. Click "+ New Rectangle" or "/ New Line" in the tool window.
+  2. The tool window disappears and your screen goes slightly dark.
+  3. Hold your left mouse button and drag over the button/area you want.
+     - For a rectangle: drag a box around the button.
+     - For a line: drag a line across the deploy zone.
+  4. Release the mouse button.
+  5. A small dialog box pops up asking for a name.
+  6. Type the EXACT name from the list in Part 4 below.
+  7. Click "Add & Next" to tag another pointer right away,
+     OR click "Add & Finish" to save the file.
+
+  --- STEP 4: Save your pointers ---
+
+  1. After tagging all pointers, click "Finish & Save File".
+  2. A format picker appears -- choose JSON.
+  3. Save the file as:  All_Tags.json
+  4. Save it directly into the main bot folder:
+       C:\Coc Bot Simple v1\All_Tags.json
+
+  TIP: If All_Tags.json already exists there, overwrite it.
+
+________________________________________________________________________________
+PART 4 -- POINTER NAMES AND ORDER (CRITICAL -- SPELL THEM EXACTLY)
+________________________________________________________________________________
+
+  Tag every pointer in the order listed below.
+  Names are case-sensitive. Copy them exactly.
+
+  ---- NAVIGATION BUTTONS (use RECTANGLE shape) ----
+
+  These are UI buttons you click to move through game menus.
+  Tag them while your game is on the VILLAGE HOME SCREEN
+  or on the relevant screen where each button appears.
+
+  Order  Name                    Where to find it
+  -----  ----------------------  -----------------------------------------
+    1.   Attack Button           The sword icon on your village screen
+    2.   Find a Match            The green "Find a Match" button in attack
+    3.   03- Attack Button       The orange "Attack!" button vs opponent
+    4.   End Battle              The "End Battle" button during battle
+    5.   Okay Button             The "Okay" / confirm button on results
+    6.   Return Home Button      The "Return Home" button after results
+
+  ---- SPELL DEPLOY POINTS (use RECTANGLE shape) ----
+
+  These are spots on the BATTLEFIELD where spells land.
+  Tag them while you are in a battle (or practice battle).
+
+  Order  Name                    Where to find it
+  -----  ----------------------  -----------------------------------------
+    7.   Spell Deploy 01         First spot where you want spells to land
+    8.   spell deploy 02         Second spot where you want spells to land
+
+  NOTE: Tag a small area around each spot. The bot picks a random
+        point inside the box each time, which looks more natural.
+
+  ---- TROOP DEPLOY ZONES (use LINE shape) ----
+
+  These are lines drawn across the edge of the battlefield where
+  you want troops to walk in from.
+
+  Order  Name                    Where to find it
+  -----  ----------------------  -----------------------------------------
+    9.   Deploy area 01          First entry line (e.g. top edge of base)
+   10.   Deploy area 02          Second entry line (e.g. right side)
+   11.   Deploy area 03          Main entry line (longest / most troops)
+
+  HOW TO DRAW A DEPLOY LINE:
+    - Click "/ New Line" in the Pointer tool.
+    - Click and drag from one end of the entry zone to the other.
+    - Draw it along the border edge where troops should be placed.
+    - Keep it away from walls (draw just outside the base perimeter).
+
+  ---- CAMERA GESTURE (use LINE shape) ----
+
+  This is a swipe the bot does to move the camera after battle starts.
+
+  Order  Name                    What it does
+  -----  ----------------------  -----------------------------------------
+   12.   click and drag          Camera pan (swipe to reposition the view)
+
+  HOW TO DRAW IT:
+    - Click "/ New Line".
+    - Draw a line across the middle of the battlefield,
+      going from RIGHT to LEFT (that pans the camera left).
+    - Adjust direction to taste after watching the bot run once.
+
+  ════════════════════════════════════════════════════════════════════
+  FULL POINTER LIST AT A GLANCE:
+
+    #   Name                  Type        Purpose
+   --   --------------------  ----------  ----------------------------
+    1   Attack Button         RECTANGLE   Opens attack menu
+    2   Find a Match          RECTANGLE   Starts matchmaking
+    3   03- Attack Button     RECTANGLE   Confirms attack vs opponent
+    4   End Battle            RECTANGLE   Ends the battle early
+    5   Okay Button           RECTANGLE   Confirms results screen
+    6   Return Home Button    RECTANGLE   Goes back to village
+    7   Spell Deploy 01       RECTANGLE   Spell landing spot 1
+    8   spell deploy 02       RECTANGLE   Spell landing spot 2
+    9   Deploy area 01        LINE        Troop entry zone 1
+   10   Deploy area 02        LINE        Troop entry zone 2
+   11   Deploy area 03        LINE        Main troop entry zone
+   12   click and drag        LINE        Camera pan gesture
+
+  TOTAL: 8 rectangles + 4 lines = 12 pointers
+  ════════════════════════════════════════════════════════════════════
+
+________________________________________________________________________________
+PART 5 -- WHAT THE BOT DOES WITH EACH POINTER
+________________________________________________________________________________
+
+  The bot runs this sequence every single attack loop:
+
+  STEP  ACTION                          POINTER USED
+  ----  ------------------------------  ------------------------------
+   1    Click the attack button         Attack Button
+   2    Click find a match              Find a Match
+   3    Click attack vs opponent        03- Attack Button
+        Wait 7 seconds for battle load
+   4    Zoom camera out                 (center of screen, no pointer)
+   5    Swipe camera to reposition      click and drag
+   6    Select spell (key A/S/D/F)      (keyboard key -- no pointer)
+        Drop spell on battlefield x4   Spell Deploy 01
+        Drop spell on battlefield x4   spell deploy 02
+        (repeats for each spell)
+   7    Select troop (key 1/2/3/4)      (keyboard key -- no pointer)
+        Deploy troops on entry zone 1  Deploy area 01
+        Deploy troops on entry zone 2  Deploy area 02
+        Deploy troops on main zone     Deploy area 03
+        (repeats for each troop type)
+   8    Select hero (key Q/W/E/R)       (keyboard key -- no pointer)
+        Deploy hero on main zone x1    Deploy area 03
+        Press hero key again (ability) (keyboard key -- no pointer)
+        (repeats for all 4 heroes)
+        Wait 40 seconds for battle
+   9    Click end battle                End Battle
+  10    Click okay / confirm            Okay Button
+        Wait 5 seconds for results
+  11    Click return home               Return Home Button
+        Wait 5 seconds, then repeat
+
+________________________________________________________________________________
+PART 6 -- TEST YOUR POINTERS (calibrate.py)
+________________________________________________________________________________
+
+  Run this BEFORE running the real bot to make sure all pointers
+  are hitting the right buttons.
+
+  1. Open your emulator with CoC running.
+  2. Open Command Prompt in the bot folder.
+  3. Type:   python calibrate.py
+  4. Press Enter.
+  5. Switch to your emulator window within 5 seconds.
+  6. Watch the mouse cursor move to each tagged point one by one.
+  7. If the cursor lands on the wrong spot, re-tag that pointer.
+
+________________________________________________________________________________
+PART 7 -- RUN THE BOT
+________________________________________________________________________________
+
+  Option A (easy): Double-click Start_Bot.bat
+  Option B (manual):
+    1. Open Command Prompt in the bot folder.
+    2. Type:  python coc_bot.py
+    3. Press Enter.
+
+  The Bot Control Panel window opens.
+
+  --- BEFORE YOU CLICK START ---
+
+  1. Set "Troops to spam": how many different troop TYPES you want
+     to deploy (1 to 4). Each type is selected by key 1, 2, 3, or 4.
+  2. Set "Spells to spam": how many different spells (1 to 4).
+     Selected by keys A, S, D, F.
+  3. Heroes always deploy all 4 (keys Q, W, E, R).
+  4. Choose Deploy Speed:
+       - Safe Mode:         0.04-0.08 s per click (human-like, recommended)
+       - Fast Mode:         0.025-0.06 s per click
+       - Extreme Fast Mode: 0.01-0.025 s per click (very fast)
+     NOTE: Speed mode only changes how fast troops/spells are DEPLOYED.
+           Button navigation clicks are always 0.20-0.40 s (always safe).
+
+  --- CLICKING START ---
+
+  1. Click Start in the bot window.
+  2. You have 5 seconds -- switch to your emulator window NOW.
+  3. The bot will run by itself. Do not touch the mouse.
+
+  --- PAUSE AND STOP ---
+
+  Pause  --> Click Pause button. Bot stops before its next action.
+             Click Resume to continue.
+  Stop   --> Click Stop. Bot finishes what it is doing, then quits.
+  Emergency stop --> Slam your mouse into the TOP-LEFT CORNER of
+                     your screen at any time. Bot stops instantly.
+
+________________________________________________________________________________
+PART 8 -- ADJUSTING DEPLOY COUNTS (advanced)
+________________________________________________________________________________
+
+  Open coc_bot.py in Notepad and look for these lines near the top:
+
+    SPELL_DEPLOY1_COUNT = 4    # taps on Spell Deploy 01 per spell
+    SPELL_DEPLOY2_COUNT = 4    # taps on spell deploy 02 per spell
+
+    TROOP_AREA01_COUNT = 6     # troops deployed on Deploy area 01
+    TROOP_AREA02_COUNT = 6     # troops deployed on Deploy area 02
+    TROOP_AREA03_COUNT = 32    # troops deployed on Deploy area 03
+
+  Change the numbers to match how many troops/spells you actually have.
+  Save the file after editing.
+
+________________________________________________________________________________
+PART 9 -- TROUBLESHOOTING
+________________________________________________________________________________
+
+  PROBLEM: "Tag not found" error when bot runs
+  FIX: The name in All_Tags.json does not match. Re-run the Pointer Tool
+       and make sure the name is spelled exactly as shown in Part 4.
+
+  PROBLEM: Bot clicks in the wrong place
+  FIX: Your emulator window moved or was resized. Put it back to
+       the exact same position and size as when you tagged it.
+       Then run calibrate.py to confirm.
+
+  PROBLEM: Troops are not being deployed
+  FIX: The keyboard hotkeys (1,2,3,4 / A,S,D,F / Q,W,E,R) are not
+       set up in your emulator. Go to your emulator's keyboard mapping
+       settings and assign the correct keys to each troop/spell/hero slot.
+
+  PROBLEM: Bot runs but game does not respond to key presses
+  FIX: Make sure the emulator window is the active (focused) window
+       when the bot is running. The bot auto-switches focus via mouse
+       movement, but some emulators may need a click first.
+
+  PROBLEM: Python not found
+  FIX: Re-install Python from python.org and check "Add to PATH".
+
+================================================================================
+                        END OF GUIDE -- GOOD LUCK!
+================================================================================

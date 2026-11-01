@@ -1,0 +1,173 @@
+{
+  "exported_at": "2026-07-08T03:16:47",
+  "format": "x_min-x_max*y_min-y_max",
+  "regions": [
+    {
+      "index": 1,
+      "tag": "01- Attack Button",
+      "x_min": 1302,
+      "x_max": 1398,
+      "y_min": 984,
+      "y_max": 1079,
+      "width": 96,
+      "height": 95,
+      "coords": "1302-1398*984-1079"
+    },
+    {
+      "index": 2,
+      "tag": "02- Find a Match",
+      "x_min": 1350,
+      "x_max": 1576,
+      "y_min": 853,
+      "y_max": 920,
+      "width": 226,
+      "height": 67,
+      "coords": "1350-1576*853-920"
+    },
+    {
+      "index": 3,
+      "tag": "03- Attack Button",
+      "x_min": 2264,
+      "x_max": 2464,
+      "y_min": 975,
+      "y_max": 1014,
+      "width": 200,
+      "height": 39,
+      "coords": "2264-2464*975-1014"
+    },
+    {
+      "index": 4,
+      "tag": "04- Valk Select",
+      "x_min": 1469,
+      "x_max": 1534,
+      "y_min": 1001,
+      "y_max": 1087,
+      "width": 65,
+      "height": 86,
+      "coords": "1469-1534*1001-1087"
+    },
+    {
+      
+    {
+      "index": 8,
+      "tag": "Spell 01 Select",
+      "x_min": 1981,
+      "x_max": 2045,
+      "y_min": 1002,
+      "y_max": 1088,
+      "width": 64,
+      "height": 86,
+      "coords": "1981-2045*1002-1088"
+    },
+    {
+      "index": 9,
+      "tag": "Spell 02 select",
+      "x_min": 2064,
+      "x_max": 2129,
+      "y_min": 1004,
+      "y_max": 1086,
+      "width": 65,
+      "height": 82,
+      "coords": "2064-2129*1004-1086"
+    },
+    {
+      "index": 10,
+      "tag": "Speel Deploy 01",
+      "x_min": 1976,
+      "x_max": 2090,
+      "y_min": 668,
+      "y_max": 758,
+      "width": 114,
+      "height": 90,
+      "coords": "1976-2090*668-758"
+    },
+    {
+      "index": 11,
+      "tag": "spell deploy 02",
+      "x_min": 1831,
+      "x_max": 1939,
+      "y_min": 761,
+      "y_max": 869,
+      "width": 108,
+      "height": 108,
+      "coords": "1831-1939*761-869"
+    },
+    {
+      "index": 12,
+      "tag": "Hero 01 Select",
+      "x_min": 1653,
+      "x_max": 1716,
+      "y_min": 1001,
+      "y_max": 1090,
+      "width": 63,
+      "height": 89,
+      "coords": "1653-1716*1001-1090"
+    },
+    {
+      "index": 13,
+      "tag": "Hero 02 Select",
+      "x_min": 1733,
+      "x_max": 1793,
+      "y_min": 1007,
+      "y_max": 1089,
+      "width": 60,
+      "height": 82,
+      "coords": "1733-1793*1007-1089"
+    },
+    {
+      "index": 14,
+      "tag": "Hero 03 select",
+      "x_min": 1818,
+      "x_max": 1874,
+      "y_min": 1002,
+      "y_max": 1087,
+      "width": 56,
+      "height": 85,
+      "coords": "1818-1874*1002-1087"
+    },
+    {
+      "index": 15,
+      "tag": "Hero 04 select",
+      "x_min": 1894,
+      "x_max": 1953,
+      "y_min": 1006,
+      "y_max": 1088,
+      "width": 59,
+      "height": 82,
+      "coords": "1894-1953*1006-1088"
+    },
+    {
+      "index": 16,
+      "tag": "End Battle",
+      "x_min": 1303,
+      "x_max": 1415,
+      "y_min": 933,
+      "y_max": 967,
+      "width": 112,
+      "height": 34,
+      "coords": "1303-1415*933-967"
+    },
+    {
+      "index": 17,
+      "tag": "Okay Button",
+      "x_min": 1944,
+      "x_max": 2132,
+      "y_min": 789,
+      "y_max": 864,
+      "width": 188,
+      "height": 75,
+      "coords": "1944-2132*789-864"
+    },
+    {
+      "index": 18,
+      "tag": "Return Home Button",
+      "x_min": 1843,
+      "x_max": 1998,
+      "y_min": 969,
+      "y_max": 1030,
+      "width": 155,
+      "height": 61,
+      "coords": "1843-1998*969-1030"
+    }
+  ]
+}

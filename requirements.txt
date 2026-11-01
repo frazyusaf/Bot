@@ -1,0 +1,16 @@
+# ============================================================
+# Clash of Clans Attack Bot  -  Python Requirements
+# ============================================================
+# Install everything with:
+#   pip install -r requirements.txt
+# (Start_Bot.bat does this automatically)
+
+# ---- Bot (coc_bot.py) ----
+pyautogui>=0.9.54      # mouse automation
+pydirectinput>=1.0.4   # DirectInput key presses (required for emulators like BlueStacks/LDPlayer/MEmu)
+# tkinter is built into Python on Windows -- no install needed
+
+# ---- Pointer Tool (Pointer\screen_region_tagger.py) ----
+# tkinter is built into Python on Windows -- no install needed
+# No additional packages required beyond the Python standard library
+# (uses: tkinter, csv, io, json, math, dataclasses, datetime)

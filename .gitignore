@@ -1,0 +1,29 @@
+# =============================================
+#  Clash of Clans Bot – .gitignore
+# =============================================
+
+# --- YOUR PERSONAL COORDINATES (keep private) ---
+All_Tags.json
+
+# --- Python cache ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+Pointer/__pycache__/
+
+# --- Virtual environments ---
+venv/
+.venv/
+env/
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editor files ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
